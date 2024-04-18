@@ -1,0 +1,22 @@
+[
+  {
+    "imageURI": "/hr.svg",
+    "name": "Croatian"
+  },
+  {
+    "imageURI": "/jp.svg",
+    "name": "Japanise"
+  },
+  {
+    "imageURI": "/fr.svg",
+    "name": "French"
+  },
+  {
+    "imageURI": "/es.svg",
+    "name": "Spanish"
+  },
+  {
+    "imageURI": "/it.svg",
+    "name": "Italian"
+  }
+]
