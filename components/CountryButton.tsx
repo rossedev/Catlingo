@@ -1,9 +1,9 @@
-import Image from "next/image"
-import { Button } from "./ui/button"
+import Image from 'next/image'
+import { Button } from './ui/button'
 
 interface ICountryButtonProps {
-    imageSrc:string,
-    nameCountry:string
+  imageSrc: string
+  nameCountry: string
 }
 export const CountryButton = ({
   imageSrc,
@@ -20,5 +20,5 @@ export const CountryButton = ({
       />
       <span>{nameCountry}</span>
     </Button>
-  );
-};
+  )
+}

@@ -1,7 +1,14 @@
-import { LoaderSpin } from "@/components/LoaderSpin";
-import { Button } from "@/components/ui/button";
-import { ClerkLoaded, ClerkLoading, SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-import Image from "next/image";
+import { LoaderSpin } from '@/components/LoaderSpin'
+import { Button } from '@/components/ui/button'
+import {
+  ClerkLoaded,
+  ClerkLoading,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
+import Image from 'next/image'
 
 export const Header = () => {
   return (
@@ -34,5 +41,5 @@ export const Header = () => {
         </ClerkLoaded>
       </div>
     </header>
-  );
-};
+  )
+}

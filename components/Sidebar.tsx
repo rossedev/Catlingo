@@ -1,21 +1,21 @@
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import Link from "next/link";
-import { SidebarItem } from "./SidebarItem";
-import itemsSidebar from "@/data/itemsSidebar.json";
-import { ClerkLoaded, ClerkLoading, UserButton } from "@clerk/nextjs";
-import { LoaderSpin } from "./LoaderSpin";
+import { cn } from '@/lib/utils'
+import Image from 'next/image'
+import Link from 'next/link'
+import { SidebarItem } from './SidebarItem'
+import itemsSidebar from '@/data/itemsSidebar.json'
+import { ClerkLoaded, ClerkLoading, UserButton } from '@clerk/nextjs'
+import { LoaderSpin } from './LoaderSpin'
 
 type TSidebarProps = {
-  className?: string;
-};
+  className?: string
+}
 
 export const Sidebar = ({ className }: TSidebarProps) => {
   return (
     <div
       className={cn(
-        "flex lg:fixed h-full lg:w-64 left-0 top-0 px-4 border-r-2 flex-col",
-        className
+        'flex lg:fixed h-full lg:w-64 left-0 top-0 px-4 border-r-2 flex-col',
+        className,
       )}
     >
       <Link href="/learn">
@@ -38,12 +38,12 @@ export const Sidebar = ({ className }: TSidebarProps) => {
       </div>
       <div className="p-4">
         <ClerkLoading>
-          <LoaderSpin/>
+          <LoaderSpin />
         </ClerkLoading>
         <ClerkLoaded>
           <UserButton afterSignOutUrl="/" />
         </ClerkLoaded>
       </div>
     </div>
-  );
-};
+  )
+}
