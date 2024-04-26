@@ -5,11 +5,6 @@ import { UserProgress } from '@/components/UserProgress'
 import { getUserProgress } from '@/db/queries'
 import { redirect } from 'next/navigation'
 
-const defaultCourse = {
-  title: 'Spanish',
-  imageSrc: '/es.svg',
-}
-
 const LearnPage = async () => {
   const [userProgress] = await Promise.all([getUserProgress()])
 
@@ -20,13 +15,13 @@ const LearnPage = async () => {
   return (
     <div className="flex gap-12 px-6">
       <FeedWrapper>
-        <Header title="Spanish" />
+        <Header title={userProgress.activeCourse.title} />
       </FeedWrapper>
       <StickyWrapper>
         <UserProgress
-          activeCourse={defaultCourse}
-          hearts={5}
-          points={100}
+          activeCourse={userProgress.activeCourse}
+          hearts={userProgress.hearts}
+          points={userProgress.points}
           hasActiveSubscription={false}
         />
       </StickyWrapper>

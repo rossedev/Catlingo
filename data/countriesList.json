@@ -1,22 +1,27 @@
 [
   {
-    "imageURI": "/hr.svg",
-    "name": "Croatian"
+    "id": 1,
+    "imageSrc": "/hr.svg",
+    "title": "Croatian"
   },
   {
-    "imageURI": "/jp.svg",
-    "name": "Japanise"
+    "id": 2,
+    "imageSrc": "/jp.svg",
+    "title": "Japanise"
   },
   {
-    "imageURI": "/fr.svg",
-    "name": "French"
+    "id": 3,
+    "imageSrc": "/fr.svg",
+    "title": "French"
   },
   {
-    "imageURI": "/es.svg",
-    "name": "Spanish"
+    "id": 4,
+    "imageSrc": "/es.svg",
+    "title": "Spanish"
   },
   {
-    "imageURI": "/it.svg",
-    "name": "Italian"
+    "id": 5,
+    "imageSrc": "/it.svg",
+    "title": "Italian"
   }
 ]

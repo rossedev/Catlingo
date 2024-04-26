@@ -7,9 +7,9 @@ export const Footer = () => {
       <div className="flex max-w-screen-lg mx-auto items-center justify-evenly h-full">
         {countriesList.map((country) => (
           <CountryButton
-            imageSrc={country.imageURI}
-            nameCountry={country.name}
-            key={country.name}
+            imageSrc={country.imageSrc}
+            nameCountry={country.title}
+            key={country.title}
           />
         ))}
       </div>
