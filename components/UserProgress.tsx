@@ -3,6 +3,7 @@ import { Button } from './ui/button'
 import Image from 'next/image'
 import { InfinityIcon } from 'lucide-react'
 import { courses } from '@/db/schema'
+import { HeartIcon } from './HeartIcon'
 
 type TUserProgressProps = {
   activeCourse: typeof courses.$inferSelect
@@ -44,13 +45,7 @@ export const UserProgress = ({
       </Link>
       <Link href="/shop">
         <Button variant="ghost" className="text-rose-500">
-          <Image
-            src="/heart.svg"
-            alt="Hearts"
-            width={22}
-            height={22}
-            className="mr-2"
-          />
+          <HeartIcon />
           {hasActiveSubscription ? (
             <InfinityIcon className="h-4 w-4 stroke-[3]" />
           ) : (
