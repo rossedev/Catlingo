@@ -5,6 +5,8 @@ import { useState } from 'react'
 import { Header } from './Header'
 import { QuestionBubble } from './QuestionBubble'
 import { Challenge } from './Challenge'
+import { Footer } from './Footer'
+import { TStatus } from '@/types/defaults'
 
 type TQuizProps = {
   initialLessonId: number
@@ -27,6 +29,8 @@ export const Quiz = ({
   const [hearts, setHearts] = useState(initialHearts)
   const [percentage, setPercentage] = useState(initialPercentage)
   const [challenges] = useState(initialLessonChallenges)
+  const [selectedOption, setSelectedOption] = useState<number>()
+  const [status, setStatus] = useState<TStatus>('wrong')
   const [activeIndex, setActiveIndex] = useState(() => {
     const uncompletedIndex = challenges.findIndex(
       (challenge: any) => !challenge.completed,
@@ -35,6 +39,12 @@ export const Quiz = ({
   })
   const currentChallenge = challenges[activeIndex]
   const currentChallengeOptions = currentChallenge?.challengeOptions ?? []
+
+  const onSelect = (id: number) => {
+    if (status !== 'none') return
+
+    setSelectedOption(id)
+  }
 
   const titleChallenge =
     currentChallenge.type === 'ASSIST'
@@ -61,9 +71,9 @@ export const Quiz = ({
               )}
               <Challenge
                 options={currentChallengeOptions}
-                onSelect={() => {}}
-                status="none"
-                selectedOption={undefined}
+                onSelect={onSelect}
+                status={status}
+                selectedOption={selectedOption}
                 disabled={false}
                 type={currentChallenge.type}
               />
@@ -71,6 +81,7 @@ export const Quiz = ({
           </div>
         </div>
       </div>
+      <Footer disabled={!selectedOption} status={status} onCheck={() => {}} />
     </>
   )
 }

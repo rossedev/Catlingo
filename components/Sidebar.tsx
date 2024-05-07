@@ -20,7 +20,7 @@ export const Sidebar = ({ className }: TSidebarProps) => {
     >
       <Link href="/learn">
         <div className="flex pt-8 pl-4 pb-7 items-center gap-x-3">
-          <Image src="/mascot.svg" height={40} width={40} alt="Mascot" />
+          <Image src="/icons/mascot.svg" height={40} width={40} alt="Mascot" />
           <h1 className="text-2xl font-extrabold text-green-500 tracking-wide">
             Duo
           </h1>

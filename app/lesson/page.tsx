@@ -1,6 +1,6 @@
 import { getLesson, getUserProgress } from '@/db/queries'
 import { redirect } from 'next/navigation'
-import { Quiz } from './Quiz'
+import { Quiz } from './components/Quiz'
 
 const LessonPage = async () => {
   const [lesson, userProgress] = await Promise.all([

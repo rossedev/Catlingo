@@ -1,11 +1,12 @@
 import { challengeOptions, challenges } from '@/db/schema'
 import { cn } from '@/lib/utils'
 import { Card } from './Card'
+import { TStatus } from '@/types/defaults'
 
 type TChallengeProps = {
   options: (typeof challengeOptions.$inferSelect)[]
   onSelect: (id: number) => void
-  status: 'correct' | 'wrong' | 'none'
+  status: TStatus
   selectedOption?: number
   disabled?: boolean
   type: (typeof challenges.$inferSelect)['type']

@@ -17,7 +17,7 @@ export const HeartIcon = ({
 }: THeartIconProps) => {
   return (
     <Image
-      src={src || '/heart.svg'}
+      src={src || '/icons/heart.svg'}
       alt={description || 'Hearts'}
       width={width || 22}
       height={height || 22}

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import './globals.css'
 import { ClerkProvider } from '@clerk/nextjs'
-import { TLayoutProps } from '@/types/layoutPropsDefault'
+import { TLayoutProps } from '@/types/defaults'
 import { Toaster } from '@/components/ui/sonner'
 import { ExitModal } from '@/components/modals/ExitModal'
 

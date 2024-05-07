@@ -2,21 +2,21 @@
   {
     "label": "Learn",
     "href": "/learn",
-    "iconSrc": "/learn.svg"
+    "iconSrc": "/icons/learn.svg"
   },
   {
     "label": "LeaderBoard",
     "href": "/leaderboard",
-    "iconSrc": "/leaderboard.svg"
+    "iconSrc": "/icons/leaderboard.svg"
   },
   {
     "label": "Quests",
     "href": "/quests",
-    "iconSrc": "/quests.svg"
+    "iconSrc": "/icons/quests.svg"
   },
   {
     "label": "Shop",
     "href": "/shop",
-    "iconSrc": "/shop.svg"
+    "iconSrc": "/icons/shop.svg"
   }
 ]

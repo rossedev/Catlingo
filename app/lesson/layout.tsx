@@ -1,4 +1,4 @@
-import { TLayoutProps } from '@/types/layoutPropsDefault'
+import { TLayoutProps } from '@/types/defaults'
 
 const LessonLayout = ({ children }: TLayoutProps) => {
   return (

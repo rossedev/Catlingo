@@ -1,27 +1,27 @@
 [
   {
     "id": 1,
-    "imageSrc": "/hr.svg",
+    "imageSrc": "/icons/hr.svg",
     "title": "Croatian"
   },
   {
     "id": 2,
-    "imageSrc": "/jp.svg",
+    "imageSrc": "/icons/jp.svg",
     "title": "Japanise"
   },
   {
     "id": 3,
-    "imageSrc": "/fr.svg",
+    "imageSrc": "/icons/fr.svg",
     "title": "French"
   },
   {
     "id": 4,
-    "imageSrc": "/es.svg",
+    "imageSrc": "/icons/es.svg",
     "title": "Spanish"
   },
   {
     "id": 5,
-    "imageSrc": "/it.svg",
+    "imageSrc": "/icons/it.svg",
     "title": "Italian"
   }
 ]

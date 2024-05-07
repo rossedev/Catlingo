@@ -1,6 +1,6 @@
 import { MobileHeader } from '@/components/MobileHeader'
 import { Sidebar } from '@/components/Sidebar'
-import { TLayoutProps } from '@/types/layoutPropsDefault'
+import { TLayoutProps } from '@/types/defaults'
 
 export default function MainLayout({ children }: Readonly<TLayoutProps>) {
   return (

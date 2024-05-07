@@ -22,7 +22,7 @@ export const SidebarItem = ({ label, iconSrc, href }: TSidebarItemProps) => {
     >
       <Link href={href}>
         <Image
-          src={iconSrc ? iconSrc : './default.svg'}
+          src={iconSrc ? iconSrc : './icons/default.svg'}
           alt={label}
           className="mr-5"
           width={26}

@@ -1,6 +1,6 @@
 import { Header } from './Header'
 import { Footer } from './Footer'
-import { TLayoutProps } from '@/types/layoutPropsDefault'
+import { TLayoutProps } from '@/types/defaults'
 
 const MarketingLayout = ({ children }: TLayoutProps) => {
   return (
