@@ -1,13 +1,13 @@
+import { useFooter } from '@/actions/useFooter'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { TStatus } from '@/types/defaults'
-import { useFooter } from './useFooter'
 
 type TFooterProps = {
   onCheck: () => void
   status: TStatus | 'completed'
   disabled?: boolean
-  lessonId?: boolean
+  lessonId?: number
 }
 
 type TMessageFooterProps = {

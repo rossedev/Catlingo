@@ -1,10 +1,10 @@
 import { CheckCircle, XCircle } from 'lucide-react'
-import { MessageFooter } from './Footer'
+import { MessageFooter } from '../app/lesson/components/Footer'
 import { Button } from '@/components/ui/button'
 import { useKey, useMedia } from 'react-use'
 
 export const useFooter = (
-  lessonId: boolean | undefined,
+  lessonId: number | undefined,
   onCheck: () => void,
 ) => {
   const isMobile = useMedia('(max-width:1024px)')
