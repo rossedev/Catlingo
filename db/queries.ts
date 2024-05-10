@@ -77,8 +77,8 @@ const normalizedUnits = (units: any) => {
         (challenge: any) =>
           challenge.challengeProgress &&
           challenge.challengeProgress.length > 0 &&
-          challenge.challengeProgress.some(
-            (progress: any) => progress.completed === false,
+          challenge.challengeProgress.every(
+            (progress: any) => progress.completed,
           ),
       )
       return { ...lesson, completed: completedChallenges }

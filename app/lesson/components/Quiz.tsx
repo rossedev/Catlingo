@@ -7,7 +7,7 @@ import { Challenge } from './Challenge'
 import { Footer } from './Footer'
 import { CompletedLesson } from './CompletedLesson'
 import { useQuiz } from '@/actions/useQuiz'
-import { useRouter } from 'next/navigation'
+import { useModal } from '@/store/useModal'
 
 export type TQuizProps = {
   initialLessonId: number

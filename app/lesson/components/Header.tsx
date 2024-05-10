@@ -1,6 +1,6 @@
 import { HeartIcon } from '@/components/HeartIcon'
 import { Progress } from '@/components/ui/progress'
-import { useExitModal } from '@/store/useExitModal'
+import { useExitModal } from '@/store/useModal'
 import { InfinityIcon, X } from 'lucide-react'
 
 type THeaderProps = {

@@ -1,10 +1,12 @@
 import { TStatus } from '@/types/defaults'
 import { useState, useTransition } from 'react'
-import { useAudio } from 'react-use'
+import { useAudio, useMount } from 'react-use'
 import { upsertChallengeProgress } from './challengeProgress'
 import { reduceHearts } from './userProgress'
 import { toast } from 'sonner'
 import { TQuizProps } from '@/app/lesson/components/Quiz'
+import { useModal, usePracticeModal } from '@/store/useModal'
+import { MAX_HEARTS } from '@/constants'
 
 export const useQuiz = (props: TQuizProps) => {
   const {
@@ -24,7 +26,9 @@ export const useQuiz = (props: TQuizProps) => {
 
   const [lessonId] = useState(initialLessonId)
   const [hearts, setHearts] = useState(initialHearts)
-  const [percentage, setPercentage] = useState(initialPercentage)
+  const [percentage, setPercentage] = useState(
+    initialPercentage === 100 ? 0 : initialPercentage,
+  )
   const [challengesU] = useState(initialLessonChallenges)
   const [selectedOption, setSelectedOption] = useState<number>()
   const [status, setStatus] = useState<TStatus>('none')
@@ -35,8 +39,17 @@ export const useQuiz = (props: TQuizProps) => {
     return uncompletedIndex === -1 ? 0 : uncompletedIndex
   })
 
+  const { open: openHeartsModal } = useModal()
+  const { open: openPracticeModal } = usePracticeModal()
+
   const currentChallenge = challengesU[activeIndex]
   const currentChallengeOptions = currentChallenge?.challengeOptions ?? []
+
+  useMount(() => {
+    if (initialPercentage === 100) {
+      openPracticeModal()
+    }
+  })
 
   const onSelect = (id: number) => {
     if (status !== 'none') return
@@ -73,7 +86,7 @@ export const useQuiz = (props: TQuizProps) => {
         upsertChallengeProgress(currentChallenge.id)
           .then((res) => {
             if (res?.error === 'heart') {
-              console.error('Missing hearts')
+              openHeartsModal()
               return
             }
 
@@ -82,7 +95,7 @@ export const useQuiz = (props: TQuizProps) => {
             setPercentage((prev) => prev + 100 / challengesU.length)
 
             if (initialPercentage === 100) {
-              setHearts((prev) => Math.min(prev + 1, 5))
+              setHearts((prev) => Math.min(prev + 1, MAX_HEARTS))
             }
           })
           .catch(() => toast.error('Something went wrong. Please try again.'))
@@ -93,7 +106,7 @@ export const useQuiz = (props: TQuizProps) => {
           .then((res) => {
             if (res?.error === 'hearts') {
               //TODO: Change for a warning modal
-              console.error('Missing hearts')
+              openHeartsModal()
               return
             }
 
@@ -106,8 +119,6 @@ export const useQuiz = (props: TQuizProps) => {
           })
           .catch(() => toast.error('Something went wrong. Please try again.'))
       })
-
-      console.log('Not Correct :c')
     }
   }
 
