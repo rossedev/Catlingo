@@ -1,11 +1,7 @@
-import { LoaderSpin } from '@/components/LoaderSpin'
+import GenericLoading from '@/components/GenericLoading'
 
 const Loading = () => {
-  return (
-    <div className="flex w-full h-full items-center justify-center">
-      <LoaderSpin />
-    </div>
-  )
+  return <GenericLoading />
 }
 
 export default Loading

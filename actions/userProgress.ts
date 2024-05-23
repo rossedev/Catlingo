@@ -2,7 +2,11 @@
 
 import { MAX_HEARTS, POINTS_TO_REFILL } from '@/constants'
 import db from '@/db/drizzle'
-import { getCourseById, getUserProgress } from '@/db/queries'
+import {
+  getCourseById,
+  getUserProgress,
+  getUserSubscription,
+} from '@/db/queries'
 import { challengeProgress, challenges, userProgress } from '@/db/schema'
 import { auth, currentUser } from '@clerk/nextjs'
 import { and, eq } from 'drizzle-orm'
@@ -23,10 +27,9 @@ export const upsertUserProgress = async (courseID: number) => {
     throw new Error('Course not found')
   }
 
-  /* TODO: Units and Lessons
-    if(!course.units.length || !course.units[0].lessons.length){
-        throw new Error("Course empty")
-    } */
+  if (!course.units.length || !course.units[0].lessons.length) {
+    throw new Error('Course empty')
+  }
 
   const existingUserProgress = await getUserProgress()
 
@@ -61,6 +64,7 @@ export const reduceHearts = async (challengeId: number) => {
   }
 
   const currentUserProgress = await getUserProgress()
+  const userSubscription = await getUserSubscription()
 
   const challenge = await db.query.challenges.findFirst({
     where: eq(challenges.id, challengeId),
@@ -83,6 +87,10 @@ export const reduceHearts = async (challengeId: number) => {
 
   if (isPractice) {
     return { error: 'practice' }
+  }
+
+  if (userSubscription?.isActive) {
+    return { error: 'subscription' }
   }
 
   if (!currentUserProgress) {

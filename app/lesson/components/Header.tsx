@@ -27,7 +27,7 @@ export const Header = ({
       <div className="flex items-center font-bold text-rose-500">
         <HeartIcon />
         {hasActiveSubscription ? (
-          <InfinityIcon className="h-6 w-6 stroke-[3]" />
+          <InfinityIcon className="h-6 w-6 stroke-[3] shrink-0" />
         ) : (
           hearts
         )}

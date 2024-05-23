@@ -1,5 +1,5 @@
 import { getCourses, getUserProgress } from '@/db/queries'
-import { List } from './List'
+import { List } from './components/List'
 
 const CoursesPage = async () => {
   const [courses, userProgress] = await Promise.all([

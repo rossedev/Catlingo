@@ -1,13 +1,12 @@
 'use client'
 
-import { challengeOptions, challenges } from '@/db/schema'
+import { challengeOptions, challenges, userSubscription } from '@/db/schema'
 import { Header } from './Header'
 import { QuestionBubble } from './QuestionBubble'
 import { Challenge } from './Challenge'
 import { Footer } from './Footer'
 import { CompletedLesson } from './CompletedLesson'
 import { useQuiz } from '@/actions/useQuiz'
-import { useModal } from '@/store/useModal'
 
 export type TQuizProps = {
   initialLessonId: number
@@ -17,7 +16,11 @@ export type TQuizProps = {
   })[]
   initialHearts: number
   initialPercentage: number
-  userSubscription: any
+  userSubscription:
+    | (typeof userSubscription.$inferSelect & {
+        isActive: boolean
+      })
+    | null
 }
 
 export const Quiz = (props: TQuizProps) => {
