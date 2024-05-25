@@ -1,27 +1,7 @@
 [
   {
     "id": 1,
-    "imageSrc": "/icons/hr.svg",
-    "title": "Croatian"
-  },
-  {
-    "id": 2,
-    "imageSrc": "/icons/jp.svg",
-    "title": "Japanise"
-  },
-  {
-    "id": 3,
-    "imageSrc": "/icons/fr.svg",
-    "title": "French"
-  },
-  {
-    "id": 4,
     "imageSrc": "/icons/es.svg",
     "title": "Spanish"
-  },
-  {
-    "id": 5,
-    "imageSrc": "/icons/it.svg",
-    "title": "Italian"
   }
 ]
