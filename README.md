@@ -35,7 +35,7 @@ Catlingo is a simplified clone of Duolingo, a popular language learning applicat
 ## Installation
 
 ```bash
-  - clone the repository: git clone https://github.com/tu-usuario/duolingo-clone.git
+  - clone the repository: git clone https://github.com/rossedev/Catlingo.git
   - cd catlingo
   - npm install
   - npm run dev
