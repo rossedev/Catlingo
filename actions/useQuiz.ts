@@ -105,7 +105,6 @@ export const useQuiz = (props: TQuizProps) => {
         reduceHearts(currentChallenge.id)
           .then((res) => {
             if (res?.error === 'hearts') {
-              //TODO: Change for a warning modal
               openHeartsModal()
               return
             }

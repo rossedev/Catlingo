@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Modal } from './Modal'
 import { useExitModal } from '@/store/useModal'

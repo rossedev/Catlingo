@@ -18,7 +18,7 @@ export const CompletedLesson = ({
 }: TCompletedLessonProps) => {
   const router = useRouter()
   const { width, height } = useWindowSize()
-  const [finishAudio] = useAudio({ src: '/audio/finish.mp3', autoPlay: true })
+  /* const [finishAudio] = useAudio({ src: '/audio/finish.mp3', autoPlay: true }) */
 
   return (
     <>

@@ -21,7 +21,6 @@ type TCardProps = {
 }
 
 export const Card = ({
-  id,
   text,
   imageSrc,
   audioSrc,
