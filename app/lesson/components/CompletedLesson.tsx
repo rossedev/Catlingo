@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { ResultCard } from './ResultCard'
 import { Footer } from './Footer'
 import { useRouter } from 'next/navigation'
-import { useAudio, useWindowSize } from 'react-use'
+import { useWindowSize } from 'react-use'
 import Confetti from 'react-confetti'
 
 type TCompletedLessonProps = {

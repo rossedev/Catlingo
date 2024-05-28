@@ -65,7 +65,6 @@ export const Modal = ({
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="mb-4">
-          {/* TODO: Change flex row */}
           <div className="flex flex-col gap-y-4 w-full">
             {buttonPrimary && buttonPrimary}
             {buttonCancel && buttonCancel}

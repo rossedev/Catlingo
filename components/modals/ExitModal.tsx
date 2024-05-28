@@ -14,15 +14,11 @@ export const ExitModal = () => {
     router.push('/learn')
   }
 
-  {
-    /* TODO: Chage the mascot img */
-  }
-
   return (
     <Modal
       isOpen={isOpen}
       close={handleClose}
-      img={{ src: '/icons/mascot_sad.svg' }}
+      img={{ src: '/icons/warning.svg' }}
       title="Wait, don't go!"
       description="You're about to leave the lesson. Are you sure?"
       buttonPrimary={

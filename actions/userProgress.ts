@@ -37,7 +37,7 @@ export const upsertUserProgress = async (courseID: number) => {
     await db.update(userProgress).set({
       activeCourseId: courseID,
       userName: user.firstName || 'User',
-      userImageSrc: user.imageUrl || '/icons/mascot.svg',
+      userImageSrc: user.imageUrl || '/icons/world_cat.svg',
     })
 
     revalidatePath('/courses')
@@ -49,7 +49,7 @@ export const upsertUserProgress = async (courseID: number) => {
     userId,
     activeCourseId: courseID,
     userName: user.firstName || 'User',
-    userImageSrc: user.imageUrl || '/icons/mascot.svg',
+    userImageSrc: user.imageUrl || '/icons/world_cat.svg',
   })
   revalidatePath('/courses')
   revalidatePath('/learn')

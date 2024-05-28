@@ -15,11 +15,11 @@ export default function Home() {
   return (
     <div className="flex flex-col lg:flex-row max-w-[988px] mx-auto flex-1 w-full items-center justify-center p-4 gap-2">
       <div className="relative w-[240px] h-[240px] lg:w-[424px] lg:h-[424px] mb-8 lg:mb-0">
-        <Image src="/icons/hero.svg" fill alt="Hero" />
+        <Image src="/icons/multiple_cat.svg" fill alt="Hero" />
       </div>
       <div className="flex flex-col items-center gap-y-8">
         <h1 className="text-xl lg:text-3xl font-bold text-neutral-600 max-w-[480px] text-center">
-          Watch, listen and practice new languages with Duo
+          Watch, listen and practice new languages with Catlingo
         </h1>
         <div className="flex flex-col items-center gap-y-3 max-w-[330px] w-full">
           <ClerkLoading>
