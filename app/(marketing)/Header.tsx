@@ -16,9 +16,10 @@ export const Header = () => {
       <div className="flex mx-auto lg:max-w-screen-lg items-center justify-between h-full">
         <div className="flex pt-8 pl-4 pb-7 items-center gap-x-3">
           <Image
-            src="/icons/world_cat.svg"
-            height={40}
-            width={40}
+            className="items-start"
+            src="/icons/cat.svg"
+            height={30}
+            width={30}
             alt="Book Cat"
           />
           <h1 className="text-2xl font-extrabold text-green-500 tracking-wide">
